@@ -25,7 +25,7 @@ function Question6() {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get("https://itoccupa-production.up.railway.app//api/Question/6")
+      const response = await axios.get("https://itoccupa-production.up.railway.app/api/Question/6")
       console.log(response.data.results)
       setQuestion(response.data.results)
     } catch (error) {

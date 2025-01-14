@@ -10,7 +10,7 @@ export default function FindMyself() {
   // Fetch the submission counts
   const fetchSubmissionCounts = async () => {
     try {
-      const response = await axios.get('https://itoccupa-production.up.railway.app//api/form-submission-counts');
+      const response = await axios.get('https://itoccupa-production.up.railway.app/api/form-submission-counts');
       setStats([
         { id: 1, name: "ผู้ร่วมทดสอบวันนี้", value: response.data.today },
         { id: 2, name: "ผู้ร่วมทดสอบเมื่อวาน", value: response.data.yesterday },
@@ -33,7 +33,7 @@ export default function FindMyself() {
 
   const getCareer = async () => {
     try {
-      const response = await axios.get("https://itoccupa-production.up.railway.app//api/occupation");
+      const response = await axios.get("https://itoccupa-production.up.railway.app/api/occupation");
       setCareer(response.data.results);
     } catch (error) {
       console.error(error);
@@ -54,7 +54,7 @@ export default function FindMyself() {
 
   const getVideos = async () => {
     try {
-      const response = await axios.get('https://itoccupa-production.up.railway.app//api/videospath');
+      const response = await axios.get('https://itoccupa-production.up.railway.app/api/videospath');
       console.log('Video Data:', response.data);
       setVideo(response.data.results);
       setLoading(false);
