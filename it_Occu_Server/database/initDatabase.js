@@ -3,6 +3,7 @@ const mysql = require('mysql2');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 exports.databaseConnection = () => {
 
@@ -10,11 +11,7 @@ exports.databaseConnection = () => {
   app.use(bodyParser.json());
 
   try {
-    const db = mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      database: 'it_occupation'
-    });
+    const db = mysql.createConnection(process.env.MYSQL_URI);
     return db;
   } catch (error) {
     console.log(error.message);
