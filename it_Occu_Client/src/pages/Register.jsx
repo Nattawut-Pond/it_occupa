@@ -51,7 +51,6 @@ function Register() {
       password: inputs.password,
       fname: inputs.fname,
       lname: inputs.lname,
-      role: 'user',
     };
 
     try {
