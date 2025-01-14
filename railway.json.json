@@ -1,0 +1,9 @@
+{
+  "build": {
+    "it_Occu_Server": {
+      "buildCommand": "npm install",
+      "startCommand": "npm run dev",
+      "rootDirectory": "it_Occu_Server"
+    }
+  }
+}
