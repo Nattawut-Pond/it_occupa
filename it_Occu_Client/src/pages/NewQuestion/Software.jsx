@@ -26,7 +26,7 @@ function Software() {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`itoccupa-production.up.railway.app/api/newquestion/2`);
+      const response = await axios.get(`https://itoccupa-production.up.railway.app//api/newquestion/2`);
       if (response.data.results) {
         setQuestion(response.data.results);
       }

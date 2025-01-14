@@ -26,7 +26,7 @@ function Cyber() {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`itoccupa-production.up.railway.app/api/newquestion/4`);
+      const response = await axios.get(`https://itoccupa-production.up.railway.app//api/newquestion/4`);
       if (response.data.results) {
         setQuestion(response.data.results);
       }
@@ -52,7 +52,7 @@ function Cyber() {
 
       try {
         // Store the submission with the current timestamp in the database
-        await axios.post("itoccupa-production.up.railway.app/api/form-submissions", {
+        await axios.post("https://itoccupa-production.up.railway.app//api/form-submissions", {
           submitted_at: new Date().toISOString(),
         });
 

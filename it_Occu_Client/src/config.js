@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:3001/api/newquestion/4';  // e.g., 'itoccupa-production.up.railway.app' 
+export const API_URL = 'http://localhost:3001/api/newquestion/4';  // e.g., 'https://itoccupa-production.up.railway.app/' 

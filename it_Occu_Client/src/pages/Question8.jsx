@@ -27,7 +27,7 @@ function Question8() {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get("itoccupa-production.up.railway.app/api/Question/8")
+      const response = await axios.get("https://itoccupa-production.up.railway.app//api/Question/8")
       console.log(response.data.results)
       setQuestion(response.data.results)
     } catch (error) {
@@ -59,7 +59,7 @@ function Question8() {
 
       // Store the submission with the current timestamp in the database
       try {
-        await axios.post("itoccupa-production.up.railway.app/api/form-submissions", {
+        await axios.post("https://itoccupa-production.up.railway.app//api/form-submissions", {
           submitted_at: new Date().toISOString(),
         });
 
