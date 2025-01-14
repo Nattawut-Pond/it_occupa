@@ -118,9 +118,9 @@ export default function Landding() {
         <div className="border-b border-gray-300"></div>
       </div>
 
-      <h1 className="text-center text-pretty md:text-3xl mx-auto mt-20">ข่าวสารไอทีรายวัน</h1>
+      {/* <h1 className="text-center text-pretty md:text-3xl mx-auto mt-20">ข่าวสารไอทีรายวัน</h1> */}
 
-        {error ? (<div>{error}</div>) : (
+        {/* {error ? (<div>{error}</div>) : (
           <div className="flex bg-white py-1 rounded-md">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid gap-x-8 text-center lg:grid-cols-3 md:grid-cols-2">
@@ -146,7 +146,7 @@ export default function Landding() {
             </div>
           </div>
         </div>
-        )}
+        )} */}
       <Footer />
     </>
   );
