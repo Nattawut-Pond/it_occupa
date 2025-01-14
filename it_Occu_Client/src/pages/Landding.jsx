@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const axios = require('axios');
+import axios from 'axios';
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
