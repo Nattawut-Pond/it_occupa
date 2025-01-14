@@ -18,25 +18,32 @@ export default function Landding() {
   const [error, setError] = useState(null);
 
   // API Url
-  const NEWS_API_URL = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a97d7594cb794ea68098161f95cf4065";
+  
   // const API_KEY = "a97d7594cb794ea68098161f95cf4065"; 
-
+  const loadNews = async () => {
+    const NEWS_API_URL = 
+    "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a97d7594cb794ea68098161f95cf4065";
+  
+    try {
+      const response = await axios.get(NEWS_API_URL);
+      
+      // ตรวจสอบว่ามีบทความใน response หรือไม่
+      const articles = response.data.articles || [];
+      
+      // ดึงมาแค่ 3 บทความ
+      const limitedArticles = articles.slice(0, 3);
+  
+      setNews(limitedArticles); // อัปเดต state
+      setLoading(false); // ปิดสถานะ loading
+    } catch (error) {
+      console.error("Error loading news:", error);
+      setError("โหลดข้อมูลข่าวไม่สำเร็จ");
+      setLoading(false); // ปิดสถานะ loading แม้โหลดไม่สำเร็จ
+    }
+  };
   // ทำการ
   useEffect(() => {
-    Axios.get(`${NEWS_API_URL}`)
-      .then((response) => {
-        response.json()
-        console.log(response);
-        
-        // ทำให้โชว์ข่าวแค่ 3 อย่างเท่านั้น
-        const limitedArticles = response.data.articles.slice(0, 6)
-        setNews(limitedArticles);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError("โหลดข้อมูลข่าวไม่สำเร็จ");
-        setLoading(false);
-      });
+    loadNews();
   }, []);
 
 
