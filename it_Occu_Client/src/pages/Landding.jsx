@@ -25,6 +25,7 @@ export default function Landding() {
   useEffect(() => {
     Axios.get(`${NEWS_API_URL}`)
       .then((response) => {
+        response.json()
         console.log(response);
         
         // ทำให้โชว์ข่าวแค่ 3 อย่างเท่านั้น
