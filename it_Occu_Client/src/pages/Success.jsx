@@ -25,7 +25,7 @@ function Success() {
   } = useScore();
 
   // const getCarrer = async () => {
-  //     const response = await axios.get("http://localhost:3000/api/occupation");
+  //     const response = await axios.get("itoccupa-production.up.railway.app/api/occupation");
   //     const data = response.data.results;
   //     setCareer(data);
   //     data.map((item) => {

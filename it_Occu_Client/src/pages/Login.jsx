@@ -26,7 +26,7 @@ function Login({ setLogin, status }) {
     }
 
     const toastId = toast.promise(
-      axios.post("http://localhost:3000/api/login", body),
+      axios.post("itoccupa-production.up.railway.app/api/login", body),
       {
         loading: "กำลังเข้าสู่ระบบ...",
         success: (data) => `เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ ${(JSON.stringify(data.data.results[0].fname + " " + data.data.results[0].lname))}`,

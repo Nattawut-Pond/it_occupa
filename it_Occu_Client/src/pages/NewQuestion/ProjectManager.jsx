@@ -26,7 +26,7 @@ function ProjectManager() {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/newquestion/8`);
+      const response = await axios.get(`itoccupa-production.up.railway.app/api/newquestion/8`);
       if (response.data.results) {
         setQuestion(response.data.results);
       }

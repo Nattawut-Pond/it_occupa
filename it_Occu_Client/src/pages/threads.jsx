@@ -11,14 +11,14 @@ function Threads() {
 
     // Fetch threads
     useEffect(() => {
-        axios.get('http://localhost:3000/api/threads')
+        axios.get('itoccupa-production.up.railway.app/api/threads')
             .then(response => setThreads(response.data))
             .catch(error => console.error('Error fetching threads:', error));
     }, []);
 
     // Fetch comments when a thread is selected
     const fetchComments = (thread_id) => {
-        axios.get(`http://localhost:3000/api/comments/${thread_id}`)
+        axios.get(`itoccupa-production.up.railway.app/api/comments/${thread_id}`)
             .then(response => setComments(response.data))
             .catch(error => console.error('Error fetching comments:', error));
     };
@@ -26,7 +26,7 @@ function Threads() {
     // Submit a new thread
     const handleSubmitThread = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/api/threads', newThread)
+        axios.post('itoccupa-production.up.railway.app/api/threads', newThread)
             .then(response => {
                 setThreads([...threads, newThread]);
                 setNewThread({ title: '', content: '' });
@@ -37,7 +37,7 @@ function Threads() {
     // Submit a new comment
     const handleSubmitComment = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3000/api/comments', newComment)
+        axios.post('itoccupa-production.up.railway.app/api/comments', newComment)
             .then(response => {
                 fetchComments(newComment.thread_id);
                 setNewComment({ thread_id: '', user_name: '', comment: '' });

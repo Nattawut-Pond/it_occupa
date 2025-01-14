@@ -56,7 +56,7 @@ function Register() {
 
     try {
       // Check if email exists first
-      const checkEmailResponse = await axios.get(`http://localhost:3000/api/users/email`, {
+      const checkEmailResponse = await axios.get(`itoccupa-production.up.railway.app/api/users/email`, {
         params: {
           email: inputs.email
         }
@@ -68,7 +68,7 @@ function Register() {
 
       // If email doesn't exist, proceed with registration
       toast.promise(
-        axios.post("http://localhost:3000/api/register", body),
+        axios.post("itoccupa-production.up.railway.app/api/register", body),
         {
           loading: 'กำลังสมัครสมาชิก...',
           success: () => {

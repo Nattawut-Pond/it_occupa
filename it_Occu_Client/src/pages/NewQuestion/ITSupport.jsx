@@ -26,7 +26,7 @@ function ITSupport () {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/newquestion/1`);
+      const response = await axios.get(`itoccupa-production.up.railway.app/api/newquestion/1`);
       if (response.data.results) {
         setQuestion(response.data.results);
       }
