@@ -32,14 +32,11 @@ export default function Landding() {
         setLoading(false);
       })
       .catch((error) => {
-        // setError("โหลดข้อมูลข่าวไม่สำเร็จ");
+        setError("โหลดข้อมูลข่าวไม่สำเร็จ");
         setLoading(false);
       });
   }, []);
 
-  if (error) {
-    return <div>{error}</div>;
-  }
 
   return (
     <>
