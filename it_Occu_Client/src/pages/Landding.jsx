@@ -114,31 +114,33 @@ export default function Landding() {
 
       <h1 className="text-center text-pretty md:text-3xl mx-auto mt-20">ข่าวสารไอทีรายวัน</h1>
 
-      <div className="flex bg-white py-1 rounded-md">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-x-8 text-center lg:grid-cols-3 md:grid-cols-2">
-            {news.map((article, index) => (
-              <div className="flex flex-col text-center text-clip place-items-center mx-auto mt-20 mb-10 shadow-sm shadow-gray-500" key={index}>
-                <h2 className="font-semibold sm:text-1xl tracking-tight text-balance mx-2 my-2">{article.title}</h2>
-
-                <div className="my-5 mx-10">
-                  {article.urlToImage && (
-
-                    <img className="object-cover rounded-md bg-gray-50"
-                      src={article.urlToImage}
-                      alt={article.title}
-                    />
-                  )}</div>
-
-                <p className="my-4 mx-3 text-balance">{article.description}</p>
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  <button className="btn hover:bg-orange-200 text-white bg-orange-400 shadow-sm shadow-orange-500 rounded-lg justify-start mx-5 border relative my-4">อ่านเพิ่มเติม</button>
-                </a>
-              </div>
-            ))}
+        {error ? (<div>{error}</div>) : (
+          <div className="flex bg-white py-1 rounded-md">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-x-8 text-center lg:grid-cols-3 md:grid-cols-2">
+              {news.map((article, index) => (
+                <div className="flex flex-col text-center text-clip place-items-center mx-auto mt-20 mb-10 shadow-sm shadow-gray-500" key={index}>
+                  <h2 className="font-semibold sm:text-1xl tracking-tight text-balance mx-2 my-2">{article.title}</h2>
+  
+                  <div className="my-5 mx-10">
+                    {article.urlToImage && (
+  
+                      <img className="object-cover rounded-md bg-gray-50"
+                        src={article.urlToImage}
+                        alt={article.title}
+                      />
+                    )}</div>
+  
+                  <p className="my-4 mx-3 text-balance">{article.description}</p>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    <button className="btn hover:bg-orange-200 text-white bg-orange-400 shadow-sm shadow-orange-500 rounded-lg justify-start mx-5 border relative my-4">อ่านเพิ่มเติม</button>
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+        )}
       <Footer />
     </>
   );
