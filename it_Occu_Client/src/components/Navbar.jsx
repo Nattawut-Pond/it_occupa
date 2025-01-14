@@ -87,7 +87,7 @@ function Navbar() {
               <Link to="/">
                 <img
                   alt="Nav-logo"
-                  src="public/LOGOWEB1-removebg-preview.png"
+                  src="https://media.discordapp.net/attachments/935457976762921002/1328792994706624555/LOGOWEB1-removebg-preview.png?ex=6787fe69&is=6786ace9&hm=3e5935ad61a113d77497e8c795f10e35df3af4d92b76844a45af8c74d41ebd40&=&format=webp&quality=lossless&width=771&height=771"
                   className="h-20 w-auto"
                 />
               </Link>
