@@ -96,7 +96,7 @@ function About() {
 
       <div className="mt-20 mx-auto grid lg:grid-cols-2 sm:grid-cols-1 justify-items-center">
         <div className="w-auto px-10">
-          <img src="./public/LOGOWEB1-removebg-preview.png" alt="Logo" className="justify-items-center object-cover" />
+          <img src="https://cdn.discordapp.com/attachments/935457976762921002/1328792994706624555/LOGOWEB1-removebg-preview.png?ex=6787fe69&is=6786ace9&hm=3e5935ad61a113d77497e8c795f10e35df3af4d92b76844a45af8c74d41ebd40&" alt="Logo" className="justify-items-center object-cover" />
           <h1></h1>
         </div>
         <div className="w-auto px-10 justify-items-start">
