@@ -18,12 +18,12 @@ export default function Landding() {
   const [error, setError] = useState(null);
 
   // API Url
-  const NEWS_API_URL = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey";
-  const API_KEY = "a97d7594cb794ea68098161f95cf4065"; 
+  const NEWS_API_URL = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a97d7594cb794ea68098161f95cf4065";
+  // const API_KEY = "a97d7594cb794ea68098161f95cf4065"; 
 
   // ทำการ
   useEffect(() => {
-    Axios.get(`${NEWS_API_URL}?country=us&apiKey=${API_KEY}`)
+    Axios.get(`${NEWS_API_URL}`)
       .then((response) => {
         
         // ทำให้โชว์ข่าวแค่ 3 อย่างเท่านั้น
