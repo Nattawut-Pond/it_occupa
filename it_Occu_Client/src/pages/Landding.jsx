@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Axios from "axios";
+const axios = require('axios');
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ export default function Landding() {
     "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a97d7594cb794ea68098161f95cf4065";
   
     try {
-      const response = await Axios.get(NEWS_API_URL);
+      const response = await axios.get(NEWS_API_URL);
       
       // ตรวจสอบว่ามีบทความใน response หรือไม่
       const articles = response.data.articles || [];
