@@ -25,6 +25,7 @@ export default function Landding() {
   useEffect(() => {
     Axios.get(`${NEWS_API_URL}`)
       .then((response) => {
+        console.log(response);
         
         // ทำให้โชว์ข่าวแค่ 3 อย่างเท่านั้น
         const limitedArticles = response.data.articles.slice(0, 6)
