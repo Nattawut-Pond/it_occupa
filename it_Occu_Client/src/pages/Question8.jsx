@@ -60,7 +60,6 @@ function Question8() {
       // Store the submission with the current timestamp in the database
       try {
         await axios.post("https://itoccupa-production.up.railway.app/api/form-submissions", {
-          submitted_at: new Date().toISOString(),
         });
 
         setProjectManagerScore(suitabilityPercentage.toFixed(2));
