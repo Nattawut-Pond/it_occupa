@@ -58,7 +58,7 @@ function Question8() {
       const suitabilityPercentage = ((5 - averageScore) / 4) * 100;
 
       const date = new Date();
-      const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}T${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}Z`;
+      const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
       // Store the submission with the current timestamp in the database
       try {
