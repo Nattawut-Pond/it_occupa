@@ -42,26 +42,15 @@ function Cyber() {
   }, []); // Empty dependency array to run only once on mount
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Check if all 10 questions are answered
     if (Object.keys(selectedRatings).length === 10) {
       const totalScore = Object.values(selectedRatings).reduce((sum, score) => sum + score, 0);
-      const averageScore = totalScore / 10; // Always divide by 10
+      const averageScore = totalScore / 10; // Average of all 10 answers
       const suitabilityPercentage = ((5 - averageScore) / 4) * 100;
 
-      try {
-        // Store the submission with the current timestamp in the database
-        await axios.post("https://itoccupa-production.up.railway.app/api/form-submissions", {
-          submitted_at: new Date().toISOString(),
-        });
-
-        setCyberscore(suitabilityPercentage.toFixed(2));
-        navigate("/successes");
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        toast.error("เกิดข้อผิดพลาดในการส่งแบบฟอร์ม");
-      }
+      setItscore(suitabilityPercentage.toFixed(2));
+      navigate("/successes");
     } else {
       const unanswered = 10 - Object.keys(selectedRatings).length;
       toast.error(`กรุณาตอบคำถามให้ครบ (เหลืออีก ${unanswered} ข้อ)`);
