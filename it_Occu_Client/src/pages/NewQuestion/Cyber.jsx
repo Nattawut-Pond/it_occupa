@@ -49,7 +49,7 @@ function Cyber() {
       const averageScore = totalScore / 10; // Average of all 10 answers
       const suitabilityPercentage = ((5 - averageScore) / 4) * 100;
 
-      setItscore(suitabilityPercentage.toFixed(2));
+      setCyberscore(suitabilityPercentage.toFixed(2));
       navigate("/successes");
     } else {
       const unanswered = 10 - Object.keys(selectedRatings).length;

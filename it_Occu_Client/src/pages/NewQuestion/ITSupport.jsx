@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import { toast } from "react-hot-toast";
 import { useScore } from "../ScoreContext";
 import axios from "axios";
-import { API_URL } from '../../config';
+// import { API_URL } from '../../config';
 
 
 
