@@ -47,7 +47,7 @@ function About() {
         <div className="welcome-sec-slow3 mx-auto grid gap-x-8 gap-y-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center ">
           <div className="flex flex-col flex-wrap border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://cdn.discordapp.com/attachments/997478506189561897/1328801377228558390/Nattawut.jpg?ex=67880638&is=6786b4b8&hm=68ec224228e1cb025dcc0abaeeb15a70c37d7c80a76a4b79c2d6205c391e5ecf&" alt="Nattawut" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://drive.google.com/uc?id=10Hbb3YHOQRboJXxYolIVq1rn8Mxct3q7" alt="Nattawut" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               ณัฐวฒิ พูนมะลัง
@@ -59,7 +59,7 @@ function About() {
 
           <div className="flex flex-col flex-wrap relative border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://cdn.discordapp.com/attachments/997478506189561897/1328801376758661201/Siwakon.jpg?ex=67880638&is=6786b4b8&hm=43c774a0d1b8b1eb8b1fd0f163421e28e33fb7a468ceb2db5225a5eb2e51bcd5&" alt="Siwakon" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://drive.google.com/uc?id=1bmt-oOjiWB84oPLDv2mg1NO_Fajygn7t" alt="Siwakon" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               ศิวกร เอ็มประโคน
@@ -71,7 +71,7 @@ function About() {
 
           <div className="flex flex-col flex-wrap border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://cdn.discordapp.com/attachments/997478506189561897/1328801376075120743/Ramil.jpg?ex=67880637&is=6786b4b7&hm=7e746da91f5fdcc3779a5af9bce1bdc26cad4123e8fc1d173772b190e8f2253c&" alt="Ramil" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://drive.google.com/uc?id=1sh3TNqsuNwORrmG77IwFCWUfBTz_elhA" alt="Ramil" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               รามิล งามพิทยพร
@@ -96,7 +96,7 @@ function About() {
 
       <div className="mt-20 mx-auto grid lg:grid-cols-2 sm:grid-cols-1 justify-items-center">
         <div className="w-auto px-10">
-          <img src="https://cdn.discordapp.com/attachments/935457976762921002/1328792994706624555/LOGOWEB1-removebg-preview.png?ex=6787fe69&is=6786ace9&hm=3e5935ad61a113d77497e8c795f10e35df3af4d92b76844a45af8c74d41ebd40&" alt="Logo" className="justify-items-center object-cover" />
+          <img src="https://drive.google.com/uc?id=1FoXH5k107XZGn5FXZ2VqNmVanXZ1MD6W" alt="Logo" className="justify-items-center object-cover" />
           <h1></h1>
         </div>
         <div className="w-auto px-10 justify-items-start">
