@@ -87,7 +87,7 @@ function Navbar() {
               <Link to="/">
                 <img
                   alt="Nav-logo"
-                  src="https://drive.google.com/uc?id=1FoXH5k107XZGn5FXZ2VqNmVanXZ1MD6W"
+                  src="https://i.postimg.cc/J02Ktw4P/LOGOWEB1-removebg-preview.png"
                   className="h-20 w-auto"
                 />
               </Link>

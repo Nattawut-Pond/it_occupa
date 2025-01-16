@@ -47,7 +47,7 @@ function About() {
         <div className="welcome-sec-slow3 mx-auto grid gap-x-8 gap-y-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center ">
           <div className="flex flex-col flex-wrap border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://drive.google.com/uc?id=10Hbb3YHOQRboJXxYolIVq1rn8Mxct3q7" alt="Nattawut" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://i.postimg.cc/L4CxxPBL/Nattawut.jpg" alt="Nattawut" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               ณัฐวฒิ พูนมะลัง
@@ -59,7 +59,7 @@ function About() {
 
           <div className="flex flex-col flex-wrap relative border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://drive.google.com/uc?id=1bmt-oOjiWB84oPLDv2mg1NO_Fajygn7t" alt="Siwakon" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://i.postimg.cc/hPXp6Gpw/Siwakon.jpg" alt="Siwakon" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               ศิวกร เอ็มประโคน
@@ -71,7 +71,7 @@ function About() {
 
           <div className="flex flex-col flex-wrap border-spacing-1 border border-gray-100 rounded-md w-auto py-10 px-10 shadow-2xl">
             <div className="mx-auto">
-              <img src="https://drive.google.com/uc?id=1sh3TNqsuNwORrmG77IwFCWUfBTz_elhA" alt="Ramil" className="rounded-md bg-gray-50 size-64 object-cover" />
+              <img src="https://i.postimg.cc/TYBC6XsP/Ramil.jpg" alt="Ramil" className="rounded-md bg-gray-50 size-64 object-cover" />
             </div>
             <h1 className="text-pretty text-2xl text-center mt-5">
               รามิล งามพิทยพร
@@ -96,7 +96,7 @@ function About() {
 
       <div className="mt-20 mx-auto grid lg:grid-cols-2 sm:grid-cols-1 justify-items-center">
         <div className="w-auto px-10">
-          <img src="https://drive.google.com/uc?id=1FoXH5k107XZGn5FXZ2VqNmVanXZ1MD6W" alt="Logo" className="justify-items-center object-cover" />
+          <img src="https://i.postimg.cc/J02Ktw4P/LOGOWEB1-removebg-preview.png" alt="Logo" className="justify-items-center object-cover" />
           <h1></h1>
         </div>
         <div className="w-auto px-10 justify-items-start">
