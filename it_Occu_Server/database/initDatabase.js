@@ -178,54 +178,6 @@ exports.databaseConnection = () => {
     }
   });
 
-  app.get('/api/threads', (req, res) => {
-    const query = 'SELECT * FROM threads ORDER BY created_at DESC';
-    db.query(query, (err, result) => {
-      if (err) {
-        console.error('เกิดข้อผิดพลาดในการดึงข้อมูลกระทู้:', err);
-        return res.status(500).send('เกิดข้อผิดพลาด');
-      }
-      res.status(200).json(result);
-    });
-  });
-
-  app.get('/api/comments/:thread_id', (req, res) => {
-    const { thread_id } = req.params;
-    const query = 'SELECT * FROM comments WHERE thread_id = ? ORDER BY created_at DESC';
-    db.query(query, [thread_id], (err, result) => {
-      if (err) {
-        console.error('เกิดข้อผิดพลาดในการดึงความคิดเห็น:', err);
-        return res.status(500).send('เกิดข้อผิดพลาด');
-      }
-      res.status(200).json(result);
-    });
-  });
-
-
-  app.post('/api/threads_post', (req, res) => {
-    const { title, content } = req.body;
-    const query = 'INSERT INTO threads (title, content) VALUES (?, ?)';
-    db.query(query, [title, content], (err, result) => {
-      if (err) {
-        console.error('เกิดข้อผิดพลาดในการบันทึกกระทู้:', err);
-        return res.status(500).send('เกิดข้อผิดพลาด');
-      }
-      res.status(400).json({ message: 'กระทู้ถูกสร้างสำเร็จ' });
-    });
-  });
-
-  app.post('/api/comments', (req, res) => {
-    const { thread_id, user_name, comment } = req.body;
-    const query = 'INSERT INTO comments (thread_id, user_name, comment) VALUES (?, ?, ?)';
-    db.query(query, [thread_id, user_name, comment], (err, result) => {
-      if (err) {
-        console.error('เกิดข้อผิดพลาดในการบันทึกความคิดเห็น:', err);
-        return res.status(500).send('เกิดข้อผิดพลาด');
-      }
-      res.status(400).json({ message: 'ความคิดเห็นถูกบันทึกสำเร็จ' });
-    });
-  });
-
 
 
   app.listen(3000, () => {
