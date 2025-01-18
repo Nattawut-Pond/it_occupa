@@ -1,5 +1,6 @@
 const express = require('express');
 const mysql = require('mysql2');
+const bcrypt = require('bcrypt');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -29,6 +30,17 @@ exports.databaseConnection = () => {
       res.status(500).json({ message: 'Error fetching user' });
     }
   });
+
+  app.get('/api/users', async (req, res) => {
+    try {
+      const [users] = await db.query('SELECT id, email, fname, lname, password, role FROM users');
+      res.json({ results: users });
+    } catch (error) {
+      console.error('Error fetching users:', error);
+      res.status(500).json({ message: 'Error fetching users' });
+    }
+  });
+
 
   // Api newquestion
   app.get('/api/newquestion/:type', async (req, res) => {
@@ -60,7 +72,7 @@ exports.databaseConnection = () => {
   app.post('/api/register', [
     // Validation rules
     check('email').isEmail().withMessage('Please enter a valid email address'),
-    check('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long')
+
   ], async (req, res) => {
     // Handle validation errors
     const errors = validationResult(req);
