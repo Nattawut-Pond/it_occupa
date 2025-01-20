@@ -34,13 +34,7 @@ function Contact() {
                     <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                       &nbsp;
                     </p>
-
-                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                      ช่องทางอื่น ๆ
-                    </p>
-                    <p className="m-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                      Facebook : CareerPathBUIT
-                    </p>                 
+       
                   </div>
 
                   <div className="hidden rounded-xl sm:flex">
