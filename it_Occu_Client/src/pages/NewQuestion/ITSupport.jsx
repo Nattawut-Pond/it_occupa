@@ -18,7 +18,7 @@ import axios from "axios";
  * * selectedRatings คำตอบที่เลือก
 */
 // * IT Support
-function ITSupport () {
+function ITSupport() {
   const navigate = useNavigate();
   const { setItscore } = useScore();
   const [selectedRatings, setSelectedRatings] = useState([]);
@@ -67,8 +67,8 @@ function ITSupport () {
           {/* Add progress bar */}
           <div className="w-full max-w-xl mb-8">
             <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <div 
-                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300" 
+              <div
+                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
@@ -84,6 +84,12 @@ function ITSupport () {
               </h1>
               <p className="mt-8 text-pretty text-xl font-medium text-gray-500 sm:text-md">
                 กรุณาตอบคำถามทั้ง 10 ข้อเพื่อวัดความเหมาะสมในสายงาน Cyber Security
+              </p>
+            </div>
+
+            <div>
+              <p className="text-balance text-2xl font-semibold tracking-tight text-gray-900 sm:text-6x1 mt-10">
+                จงตอบคำถามต่อไปนี้ โดยเลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว
               </p>
             </div>
           </div>
@@ -104,11 +110,10 @@ function ITSupport () {
                       { value: 4, label: "น้อย" },
                       { value: 5, label: "น้อยที่สุด" }
                     ].map(({ value, label }) => (
-                      <label 
-                        key={value} 
-                        className={`flex items-center justify-center p-3 border rounded-lg cursor-pointer hover:bg-green-100 ${
-                          selectedRatings[index] === value ? 'bg-green-100 border-green-500' : ''
-                        }`}
+                      <label
+                        key={value}
+                        className={`flex items-center justify-center p-3 border rounded-lg cursor-pointer hover:bg-green-100 ${selectedRatings[index] === value ? 'bg-green-100 border-green-500' : ''
+                          }`}
                       >
                         <input
                           type="radio"
@@ -129,14 +134,13 @@ function ITSupport () {
                 </div>
               </div>
             ))}
-            
-            <button 
-              type="submit" 
-              className={`btn w-full mt-4 ${
-                Object.keys(selectedRatings).length === 10 
-                  ? "btn-success text-white" 
-                  : "btn-disabled"
-              }`}
+
+            <button
+              type="submit"
+              className={`btn w-full mt-4 ${Object.keys(selectedRatings).length === 10
+                ? "btn-success text-white"
+                : "btn-disabled"
+                }`}
             >
               ส่งคำตอบ ({Object.keys(selectedRatings).length}/10)
             </button>
