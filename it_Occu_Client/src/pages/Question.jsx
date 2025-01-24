@@ -93,7 +93,7 @@ function Question() {
 
           <div>
             <p className="text-balance text-2xl font-semibold tracking-tight text-gray-900 sm:text-6x1 mt-10">
-              จงตอบคำถามต่อไปนี้ โดยเลือกคำตอบที่ถูดต้องที่สุดเพียงข้อเดียว
+              จงตอบคำถามต่อไปนี้ โดยเลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว
             </p>
           </div>
 
